@@ -1,2 +1,2 @@
-# kaggle-project-template
-Template files for Kaggle project repositories
+# kaggle-devcontainer-template
+Template files for Kaggle devcontainer/codespaces
