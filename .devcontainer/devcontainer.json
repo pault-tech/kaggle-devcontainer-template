@@ -54,5 +54,12 @@
         "ms-toolsai.vscode-jupyter-slideshow"
       ]
     }
+  },
+  //desktop-lite
+  "forwardPorts": [6080],
+  "portsAttributes": {
+    "6080": {
+      "label": "desktop"
+    }
   }
 }
