@@ -2,6 +2,8 @@
 # AMP-Parkinson's Disease Progression Prediction
 # https://www.kaggle.com/competitions/amp-parkinsons-disease-progression-prediction
 
+function cmd_hints {
+
 #NOTE: prefered method in spacemacs is to use python mode (dont enable ipython-notebook) and install jupytext
 pip install --user jupytext #sync ipynb .py files; required for 
 
@@ -72,6 +74,7 @@ kaggle kernels
 
 kaggle kernels output
 
+}
 
 type kaggle
 
