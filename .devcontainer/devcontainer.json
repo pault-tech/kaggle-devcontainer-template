@@ -7,6 +7,7 @@
     // uncomment for sshd in python
     //"ghcr.io/devcontainers/features/sshd:1": {"version": "latest"}       
     //"ghcr.io/devcontainers/features/terraform:1": {"version": "latest"}       
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {},
     "ghcr.io/devcontainers/features/desktop-lite:1": {},
     "ghcr.io/eliises/devcontainer-features/devcontainers-cli:1": {"version": "latest"}
   },
