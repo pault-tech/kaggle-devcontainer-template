@@ -1,5 +1,8 @@
 {
-  "image": "mcr.microsoft.com/devcontainers/universal:2",
+  // "image": "mcr.microsoft.com/devcontainers/universal:2",
+//use dev tag see: https://github.com/orgs/community/discussions/63776
+  "image": "mcr.microsoft.com/devcontainers/universal:dev",
+
   //"image": "gcr.io/kaggle-images/python:latest",
   //"image": "mcr.microsoft.com/devcontainers/python:0-3.10", //NOTE: does not include sshd
   //"image": "mcr.microsoft.com/devcontainers/go:0-1-bullseye",
