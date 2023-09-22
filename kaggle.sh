@@ -1,6 +1,5 @@
-#utility script for the kaggle competition
-# AMP-Parkinson's Disease Progression Prediction
-# https://www.kaggle.com/competitions/amp-parkinsons-disease-progression-prediction
+#utility script for kaggle competitions
+# https://www.kaggle.com/competitions/<competition-path>
 
 function cmd_hints {
 
