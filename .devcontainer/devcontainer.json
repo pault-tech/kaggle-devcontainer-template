@@ -44,9 +44,11 @@
       "extensions": [
         // uncomment for vim
         // "vscodevim.vim"
+        //
+        // uncomment for vspacecode
         //"VSpaceCode.vspacecode"
         //
-        "ms-dotnettools.vscode-dotnet-runtime",
+        //"ms-dotnettools.vscode-dotnet-runtime",
         "ms-toolsai.datawrangler",
         //
         "ms-python.python",
