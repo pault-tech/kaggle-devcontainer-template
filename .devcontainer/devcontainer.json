@@ -43,10 +43,10 @@
       },
       "extensions": [
         // uncomment for vim
-        // "vscodevim.vim"
+        // "vscodevim.vim,"
         //
         // uncomment for vspacecode
-        //"VSpaceCode.vspacecode"
+        //"VSpaceCode.vspacecode,"
         //
         //"ms-dotnettools.vscode-dotnet-runtime",
         "ms-toolsai.datawrangler",
