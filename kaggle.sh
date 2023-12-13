@@ -6,15 +6,20 @@ function cmd_hints {
 #NOTE: prefered method in spacemacs is to use python mode (dont enable ipython-notebook) and install jupytext
 pip install --user jupytext #sync ipynb .py files; required for 
 
+type jupytext
+
 pip install --user kaggle
 
 # kaggle kernels pull gusthema/parkinson-s-disease-progression-prediction-w-tfdf
-kaggle kernels pull KERNAL_PATH
+KERNAL_PATH="pt1001/enterhere"
+kaggle kernels pull $KERNAL_PATH
 
-jupyter nbconvert --to python KERNAL_NAME
+KERNAL_NAME=""
+jupyter nbconvert --to python $KERNAL_NAME
 
 # mkdir -p input/amp-parkinsons-disease-progression-prediction
-mkdir -p input/DATA_PATH
+DATA_PATH=""
+mkdir -p input/$DATA_PATH
 
 cd input/DATA_PATH
 kaggle competitions download -c DATA_PATH
