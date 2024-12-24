@@ -20,7 +20,7 @@ type jupytext
 
 pip install --user kaggle
 
-cp /workspaces/dotfiles/.profile_golang ~/.profile #NOTE qg devcontainer image .profile breaks path so fix with this as of 2024/12
+cp /workspaces/dotfiles/.profile_golang ~/.profile #NOTE s3 devcontainer image .profile breaks path so fix with this as of 2024/12. also see setpath below
 
 # kaggle kernels pull gusthema/parkinson-s-disease-progression-prediction-w-tfdf
 source ~/.profile #add .local/bin to path
