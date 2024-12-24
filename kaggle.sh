@@ -12,6 +12,7 @@ alias pip=pip3
 
 alias python=python3
 
+
 #NOTE: prefered method in spacemacs is to use python mode (dont enable ipython-notebook) and install jupytext
 pip install --user jupytext #sync ipynb .py files; required for 
 
@@ -19,9 +20,13 @@ type jupytext
 
 pip install --user kaggle
 
+cp /workspaces/dotfiles/.profile_golang ~/.profile #NOTE qg devcontainer image .profile breaks path so fix with this as of 2024/12
+
 # kaggle kernels pull gusthema/parkinson-s-disease-progression-prediction-w-tfdf
+source ~/.profile #add .local/bin to path
 KERNAL_PATH="pt1001/enterhere"
 kaggle kernels pull $KERNAL_PATH
+
 
 KERNAL_NAME=""
 jupyter nbconvert --to python $KERNAL_NAME
