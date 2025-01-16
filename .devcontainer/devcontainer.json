@@ -13,6 +13,7 @@
     //"ghcr.io/devcontainers/features/sshd:1": {"version": "latest"}       
     //"ghcr.io/devcontainers/features/terraform:1": {"version": "latest"}       
     // "ghcr.io/devcontainers/features/docker-in-docker:2": {}, //DiD appears to be in universal
+    "ghcr.io/audacioustux/devcontainers/tilt:1": {},
 
     "ghcr.io/devcontainers/features/desktop-lite:1": {},
     "ghcr.io/eliises/devcontainer-features/devcontainers-cli:1": {"version": "latest"}
