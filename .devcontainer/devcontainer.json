@@ -29,6 +29,7 @@
     "vscode": {
       "settings": {
         //spacemacs in terminal tweaks 
+        //NOTE: use ctrl+p toggle keyboard shortcuts troubleshooting
         "terminal.integrated.commandsToSkipShell": [
           "-workbench.action.terminal.goToRecentDirectory", //send ctrl+g to terminal and spacemacs (not go to recent directory)
           "-workbench.action.terminal.focusFind", //ctrl+f
