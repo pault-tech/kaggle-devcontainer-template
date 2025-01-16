@@ -44,16 +44,12 @@
         "terminal.integrated.allowChords": false
       },
       "extensions": [
-        // "kahole.magit",
-        // "vscodevim.vim",
+        "kahole.magit",
+        "vscodevim.vim",
         //
         // uncomment for vspacecode
         // NOTE: also need to enable vim extension above if also want vim keybindings 2025 jan 
-        // "VSpaceCode.vspacecode",
-        //
-        //"ms-dotnettools.vscode-dotnet-runtime",
-        //
-        // "ms-toolsai.datawrangler",
+        "VSpaceCode.vspacecode"
         //
         // "ms-python.python",
         // "ms-python.vscode-pylance",
@@ -62,7 +58,12 @@
         // "ms-toolsai.jupyter-keymap",
         // "ms-toolsai.jupyter-renderers",
         // "ms-toolsai.vscode-jupyter-cell-tags",
-        // "ms-toolsai.vscode-jupyter-slideshow"
+        // "ms-toolsai.vscode-jupyter-slideshow",
+	//
+        //"ms-dotnettools.vscode-dotnet-runtime",
+        //
+        // "ms-toolsai.datawrangler",
+        //
       ]
     }
   },
