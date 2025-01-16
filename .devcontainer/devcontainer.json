@@ -44,10 +44,11 @@
         "terminal.integrated.allowChords": false
       },
       "extensions": [
-        // uncomment for vim
+        // "kahole.magit",
         // "vscodevim.vim",
         //
         // uncomment for vspacecode
+        // NOTE: vspacecode seems broken so only use vim and magit 2025 jan
         // "VSpaceCode.vspacecode",
         //
         //"ms-dotnettools.vscode-dotnet-runtime",
