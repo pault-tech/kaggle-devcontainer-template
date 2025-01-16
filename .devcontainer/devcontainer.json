@@ -48,7 +48,7 @@
         // "vscodevim.vim",
         //
         // uncomment for vspacecode
-        // NOTE: vspacecode seems broken so only use vim and magit 2025 jan
+        // NOTE: also need to enable vim extension above if also want vim keybindings 2025 jan 
         // "VSpaceCode.vspacecode",
         //
         //"ms-dotnettools.vscode-dotnet-runtime",
