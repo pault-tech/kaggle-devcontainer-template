@@ -44,6 +44,8 @@
         "terminal.integrated.allowChords": false
       },
       "extensions": [
+
+        // TODO: code --install-extension
         "kahole.magit",
         "vscodevim.vim",
         "ivoh.sendtoterminalplus",
