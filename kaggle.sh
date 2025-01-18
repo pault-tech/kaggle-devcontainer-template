@@ -21,6 +21,8 @@ pip install --user kaggle
 
 pip install kaggle
 
+type kaggle
+
 echo $PATH
 
 cp /workspaces/dotfiles/.profile_golang ~/.profile #NOTE s3 devcontainer image .profile breaks path so fix with this as of 2024/12. also see setpath below
