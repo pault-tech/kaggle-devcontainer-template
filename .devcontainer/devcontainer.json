@@ -70,6 +70,7 @@
       ]
     }
   },
+
   //desktop-lite
   "forwardPorts": [6080],
   "portsAttributes": {
@@ -78,6 +79,17 @@
     }
   },
 
+  "mounts": [
+      "source=/workspaces,target=/workspaces,type=bind,consistency=cached",
+      "source=${localEnv:HOME}/src/,target=/home/vscode/src,type=bind,consistency=cached"
+  ],
+
+  "containerEnv": {
+      "SHELL": "/bin/bash"
+  },
+
   // jupytext converts notebooks to py automatically on-open in spacemacs
-  "postCreateCommand": "pip install --user kaggle && pip install --user jupytext"
+  "postCreateCommand": "pip install --user kaggle && pip install --user jupytext; sudo chgrp vscode /var/run/docker.sock" //workaround permission denied error
+
 }
+
