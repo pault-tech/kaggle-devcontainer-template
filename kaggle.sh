@@ -4,6 +4,7 @@
 function cmd_hints {
 
 
+_ # 0. install cli kaggle api
 sudo apt update
 
 sudo apt-get install python3-pip -y
@@ -27,14 +28,25 @@ echo $PATH
 
 cp /workspaces/dotfiles/.profile_golang ~/.profile #NOTE s3 devcontainer image .profile breaks path so fix with this as of 2024/12. also see setpath below
 
+
+
+
+_ # 1 config kaggle api
 mkdir -p ~/.config/kaggle
 cp ~/src/kaggle.json ~/.config/kaggle/
+cp ~/kaggle.json ~/.config/kaggle/
 chmod 600 ~/.config/kaggle/kaggle.json
 
+
+
+_ # 2. init new kernel
+kaggle kernels init --path $kernelname
 # kaggle kernels pull gusthema/parkinson-s-disease-progression-prediction-w-tfdf
 source ~/.profile #add .local/bin to path
 KERNAL_PATH="pt1001/enterhere"
 kaggle kernels pull $KERNAL_PATH
+
+
 
 
 KERNAL_NAME=""
@@ -78,8 +90,6 @@ jupyter notebook
 curl localhost:8888
 echo done
 
-mkdir mykernel
-kaggle kernels init --path mykernel
 
 # metadata required for subsequent push
 kaggle kernels pull --metadata pt1001/parkinson-s-disease-progression-prediction-w-tfdf
