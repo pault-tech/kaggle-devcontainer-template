@@ -6,4 +6,6 @@
 pip install --user jupytext #sync ipynb .py files; required for 
 echo TERM=xterm-256color jupyter notebook #for ipython-notebook
 
+jupytext --to py:percent --output aa.py mynotebook.ipynb #eg command
+
 #use (ein:notebooklist-open)
