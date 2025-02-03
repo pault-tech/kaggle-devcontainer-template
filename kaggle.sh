@@ -92,11 +92,14 @@ kaggle help kernels init
 # 3. pull existing kernel
 # kaggle kernels pull gusthema/parkinson-s-disease-progression-prediction-w-tfdf
 source ~/.profile #add .local/bin to path
-kernelname="temp01"
+kernelname="helloworld-01" #NOTE: underscore and uppercase are invalid chars. eg helloWorld_01 is invalid
 mkdir $kernelname
 cd $kernelname
 # NOTE: metadata required for subsequent push
+printf "\n\n"
+set -x
 kaggle kernels pull --metadata $kernelname
+set +x
 cd ..
 ls .
 
