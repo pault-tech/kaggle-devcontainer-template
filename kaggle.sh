@@ -101,6 +101,13 @@ cd ..
 ls .
 
 
+
+}
+
+
+
+function kaggle_push_kernel {
+
 # 4. push kernel
 kernelname="temp01"
 echo kaggle kernels push --path ./$kernelname
@@ -113,6 +120,11 @@ cd ..
 # Notebook not found (make sure saved at least 1 version of notebook)
 
 kaggle kernels push
+
+}
+kaggle_push_kernel
+
+
 
 
 KERNAL_NAME=""
