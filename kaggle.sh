@@ -127,6 +127,11 @@ kaggle_push_kernel
 
 
 
+
+
+
+function cmd_hints 2 {
+
 KERNAL_NAME=""
 jupyter nbconvert --to python $KERNAL_NAME
 
@@ -191,7 +196,9 @@ kaggle kernels output
 
 }
 
-type kaggle
+
+
+
 
 #add kaggle to path if needed
 function setpath {
