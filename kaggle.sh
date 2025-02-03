@@ -22,11 +22,11 @@ pip install --user kaggle
 
 pip install kaggle
 
-type kaggle
-
 echo $PATH
 
 cp /workspaces/dotfiles/.profile_golang ~/.profile #NOTE s3 devcontainer image .profile breaks path so fix with this as of 2024/12. also see setpath below
+
+type kaggle
 
 
 
@@ -40,7 +40,56 @@ chmod 600 ~/.config/kaggle/kaggle.json
 
 
 _ # 2. init new kernel
+function init_kernel {
+
+kernelname="tmp1"
+mkdir $kernelname
 kaggle kernels init --path $kernelname
+ls $kernelname/
+
+mv $kernelname/kernel-metadata.json $kernelname/_kernel-metadata.json.orig
+# {
+#   "id": "accountid/INSERT_KERNEL_SLUG_HERE",
+#   "title": "INSERT_TITLE_HERE",
+#   "code_file": "INSERT_CODE_FILE_PATH_HERE",
+#   "language": "Pick one of: {python,r,rmarkdown}",
+#   "kernel_type": "Pick one of: {script,notebook}",
+#   "is_private": "true",
+#   "enable_gpu": "false",
+#   "enable_tpu": "false",
+#   "enable_internet": "true",
+#   "dataset_sources": [],
+#   "competition_sources": [],
+#   "kernel_sources": [],
+#   "model_sources": []
+# }
+
+IFS=  && read -d EOM json_config << EOM
+{
+  "id": "accountid/$1",
+  "title": "$1",
+  "code_file": "$1",
+  "language": "$2",
+  "kernel_type": "$3",
+  "is_private": "true",
+  "enable_gpu": "false",
+  "enable_tpu": "false",
+  "enable_internet": "true",
+  "dataset_sources": [],
+  "competition_sources": [],
+  "kernel_sources": [],
+  "model_sources": []
+}
+EOM
+# echo $json_config
+echo $json_config > $kernelname/kernel-metadata.json
+cat $kernelname/kernel-metadata.json
+
+kaggle help kernels init
+
+}
+
+# 3. pull existing kernel
 # kaggle kernels pull gusthema/parkinson-s-disease-progression-prediction-w-tfdf
 source ~/.profile #add .local/bin to path
 KERNAL_PATH="pt1001/enterhere"
