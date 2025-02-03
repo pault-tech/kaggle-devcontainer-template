@@ -92,10 +92,27 @@ kaggle help kernels init
 # 3. pull existing kernel
 # kaggle kernels pull gusthema/parkinson-s-disease-progression-prediction-w-tfdf
 source ~/.profile #add .local/bin to path
-KERNAL_PATH="pt1001/enterhere"
-kaggle kernels pull $KERNAL_PATH
+kernelname="temp01"
+mkdir $kernelname
+cd $kernelname
+# NOTE: metadata required for subsequent push
+kaggle kernels pull --metadata $kernelname
+cd ..
+ls .
 
 
+# 4. push kernel
+kernelname="temp01"
+echo kaggle kernels push --path ./$kernelname
+cd $kernelname
+printf "\n\n\n"
+kaggle kernels push --path ./
+printf "\n"
+cd ..
+# https://github.com/Kaggle/kaggle-api/issues/575
+# Notebook not found (make sure saved at least 1 version of notebook)
+
+kaggle kernels push
 
 
 KERNAL_NAME=""
@@ -140,7 +157,7 @@ curl localhost:8888
 echo done
 
 
-# metadata required for subsequent push
+# NOTE: metadata required for subsequent push
 kaggle kernels pull --metadata pt1001/parkinson-s-disease-progression-prediction-w-tfdf
 
 # mkdir kernels
