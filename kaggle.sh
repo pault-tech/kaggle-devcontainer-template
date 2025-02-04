@@ -28,7 +28,7 @@ cp /workspaces/dotfiles/.profile_golang ~/.profile #NOTE s3 devcontainer image .
 
 type kaggle
 
-
+kaggle competitions list
 
 
 _ # 1 config kaggle api
@@ -36,7 +36,8 @@ mkdir -p ~/.config/kaggle
 cp ~/src/kaggle.json ~/.config/kaggle/
 cp ~/kaggle.json ~/.config/kaggle/
 chmod 600 ~/.config/kaggle/kaggle.json
-
+sleep 1
+kaggle competitions list
 
 
 _ # 2. init new kernel
