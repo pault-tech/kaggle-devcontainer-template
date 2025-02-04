@@ -36,6 +36,7 @@ mkdir -p ~/.config/kaggle
 cp ~/src/kaggle.json ~/.config/kaggle/
 cp ~/kaggle.json ~/.config/kaggle/
 chmod 600 ~/.config/kaggle/kaggle.json
+cp ~/dotfiles-spacemacs/.dir-locals.el ./  # initialize mysubmit-build-cmd
 sleep 1
 kaggle competitions list
 
