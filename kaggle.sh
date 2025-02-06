@@ -31,17 +31,25 @@ type kaggle
 kaggle competitions list
 
 
+}
+
+
+function config_kaggle {
+pip install --user kaggle
+
 _ # 1 config kaggle api
 mkdir -p ~/.config/kaggle
 cp ~/src/kaggle.json ~/.config/kaggle/
 cp ~/kaggle.json ~/.config/kaggle/
 chmod 600 ~/.config/kaggle/kaggle.json
-cp ~/dotfiles-spacemacs/.dir-locals.el ./  # initialize mysubmit-build-cmd
 sleep 1
 kaggle competitions list
+cp ~/dotfiles-spacemacs/.dir-locals.el ./  # initialize mysubmit-build-cmd
 
 
-_ # 2. init new kernel
+}
+
+# 2. init new kernel
 function init_kernel {
 
 kernelname="tmp1"
@@ -94,7 +102,8 @@ kaggle help kernels init
 # 3. pull existing kernel
 # kaggle kernels pull gusthema/parkinson-s-disease-progression-prediction-w-tfdf
 source ~/.profile #add .local/bin to path
-kernelname="helloworld-01" #NOTE: underscore and uppercase are invalid chars. eg helloWorld_01 is invalid
+# kernelname="helloworld-01" #NOTE: underscore and uppercase are invalid chars. eg helloWorld_01 is invalid
+kernelname="adl-1-gradientcalc" #NOTE: underscore and uppercase are invalid chars. eg helloWorld_01 is invalid
 mkdir $kernelname
 cd $kernelname
 # NOTE: metadata required for subsequent push
@@ -124,15 +133,20 @@ cd ..
 # https://github.com/Kaggle/kaggle-api/issues/575
 # Notebook not found (make sure saved at least 1 version of notebook)
 }
-kaggle_push_kernel
+
+
+if [ "$1" = "config_kaggle" ]; then
+    config_kaggle
+else
+    kaggle_push_kernel
+fi
 
 
 
 
 
 
-
-function cmd_hints 2 {
+function cmd_hints2 {
 
 KERNAL_NAME=""
 jupyter nbconvert --to python $KERNAL_NAME
