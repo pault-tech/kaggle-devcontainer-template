@@ -125,6 +125,8 @@ function kaggle_push_kernel {
 # 4. push kernel
 # Kernel push error: Notebook not found
 # NOTE above error if notebook was not saved at least once
+# https://github.com/Kaggle/kaggle-api/issues/575
+# Notebook not found (make sure saved at least 1 version of notebook)
 kernelname="temp01" #NOTE: underscore and uppercase are invalid chars. eg helloWorld_01 is invalid
 echo kaggle kernels push --path ./$kernelname
 cd $kernelname
@@ -132,8 +134,6 @@ printf "\n\n\n"
 kaggle kernels push --path ./
 printf "\n"
 cd ..
-# https://github.com/Kaggle/kaggle-api/issues/575
-# Notebook not found (make sure saved at least 1 version of notebook)
 }
 
 
