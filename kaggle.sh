@@ -51,6 +51,7 @@ cp ~/dotfiles-spacemacs/.dir-locals.el ./  # initialize mysubmit-build-cmd
 
 # 2. init new kernel
 # NOTE: it is probably easier to create a notebook via Kaggle Web UI, then pull that notebook
+# also when creating a notebook via web remember to save at least 1 version before pulling to avoid notebook not found error
 function init_kernel {
 
 kernelname="tmp1"
