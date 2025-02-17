@@ -101,6 +101,9 @@ kaggle help kernels init
 
 }
 
+
+function pull_existing_kernel {
+
 # 3. pull existing kernel
 # kaggle kernels pull gusthema/parkinson-s-disease-progression-prediction-w-tfdf
 source ~/.profile #add .local/bin to path
@@ -229,3 +232,10 @@ function setpath {
     type kaggle
 
 }
+
+
+function _tmp {
+
+/workspaces/kaggle-devcontainer-template/kaggle.sh config_kaggle 
+
+ }
