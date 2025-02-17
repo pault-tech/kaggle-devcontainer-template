@@ -217,6 +217,11 @@ kaggle kernels
 
 kaggle kernels output
 
+
+#install ipython
+pip install ipython
+
+
 }
 
 
