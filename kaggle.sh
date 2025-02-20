@@ -37,7 +37,7 @@ kaggle competitions list
 function config_kaggle {
 pip install --user kaggle
 
-_ # 1 config kaggle api
+# 1 config kaggle api
 mkdir -p ~/.config/kaggle
 cp ~/src/kaggle.json ~/.config/kaggle/
 cp ~/kaggle.json ~/.config/kaggle/
@@ -139,6 +139,8 @@ printf "\n\n\n"
 kaggle kernels push --path ./
 printf "\n"
 cd ..
+# https://github.com/Kaggle/kaggle-api/issues/575
+# Notebook not found (make sure saved at least 1 version of notebook)
 }
 
 
