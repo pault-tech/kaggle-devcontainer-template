@@ -104,11 +104,15 @@ kaggle help kernels init
 
 function pull_existing_kernel {
 
+#NOTE: cd only when using command line
+cd /var/tmp/
+
 # 3. pull existing kernel
 # kaggle kernels pull gusthema/parkinson-s-disease-progression-prediction-w-tfdf
 source ~/.profile #add .local/bin to path
 # kernelname="helloworld-01" #NOTE: underscore and uppercase are invalid chars. eg helloWorld_01 is invalid
 kernelname="adl-1-gradientcalc" #NOTE: underscore and uppercase are invalid chars. eg helloWorld_01 is invalid
+kernelname="$2" #NOTE: underscore and uppercase are invalid chars. eg helloWorld_01 is invalid
 mkdir $kernelname
 cd $kernelname
 # NOTE: metadata required for subsequent push
@@ -146,6 +150,8 @@ cd ..
 
 if [ "$1" = "config_kaggle" ]; then
     config_kaggle
+elif [ "$1" = "pull_existing_kernel" ]; then
+    pull_existing_kernel $2
 else
     kaggle_push_kernel
 fi
