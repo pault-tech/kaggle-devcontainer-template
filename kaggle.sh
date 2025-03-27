@@ -112,7 +112,7 @@ cd /var/tmp/
 source ~/.profile #add .local/bin to path
 # kernelname="helloworld-01" #NOTE: underscore and uppercase are invalid chars. eg helloWorld_01 is invalid
 kernelname="adl-1-gradientcalc" #NOTE: underscore and uppercase are invalid chars. eg helloWorld_01 is invalid
-kernelname="$2" #NOTE: underscore and uppercase are invalid chars. eg helloWorld_01 is invalid
+kernelname="$1" #NOTE: underscore and uppercase are invalid chars. eg helloWorld_01 is invalid
 mkdir $kernelname
 cd $kernelname
 # NOTE: metadata required for subsequent push
