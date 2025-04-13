@@ -1,9 +1,9 @@
 {
   // NOTE: this is a handled as a jsonc file by github/vscode web so comments seem to be ok
 
-  //"image": "mcr.microsoft.com/devcontainers/universal:2",
+  "image": "mcr.microsoft.com/devcontainers/universal:2",
   //use dev tag see: https://github.com/orgs/community/discussions/63776
-  "image": "mcr.microsoft.com/devcontainers/universal:dev",
+  //"image": "mcr.microsoft.com/devcontainers/universal:dev",  // no space left on devices as of 2025/04
 
   //"image": "gcr.io/kaggle-images/python:latest",
   //"image": "mcr.microsoft.com/devcontainers/python:0-3.10", //NOTE: does not include sshd
@@ -15,7 +15,7 @@
     // "ghcr.io/devcontainers/features/docker-in-docker:2": {}, //DiD appears to be in universal
     "ghcr.io/audacioustux/devcontainers/tilt:1": {},
 
-    "ghcr.io/devcontainers/features/desktop-lite:1": {},
+    // "ghcr.io/devcontainers/features/desktop-lite:1": {},
     "ghcr.io/eliises/devcontainer-features/devcontainers-cli:1": {"version": "latest"}
   },
   "customizations": {
