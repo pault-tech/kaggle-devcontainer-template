@@ -21,13 +21,13 @@ echo "c.TerminalInteractiveShell.autoindent=False" >> ~/.ipython/profile_default
 
 _git diff cleanup notebook ipynb for magit
 
-dir="./"
-cd $dir
 pip install nbstripout 
 
 # Using as a Git filter
 # Set up the git filter and attributes as described in the manual installation instructions below:
 
+dir="./"
+cd $dir
 nbstripout --install
 
 # NOTE after installing add --keep-output to commands in .git/config 
