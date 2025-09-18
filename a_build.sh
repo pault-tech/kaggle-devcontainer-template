@@ -7,7 +7,8 @@ echo optional dobatch arg $2
 
 # exit
 
-cd /workspaces/_proj-dir
+PROJDIR="/workspaces/_proj-dir/"
+cd $PROJDIR
 homedir="/home/_todo_"
 symlnk="_todo_"
 
@@ -63,7 +64,13 @@ function local_jupyter_batch {
 # echo conda activate python3
 # echo pip install nbconvert # for batch submission of notebooks
 # echo pip install papermill # for batch submission of notebooks
+
 echo      conda install -y --name python3 -c conda-forge papermill nbconvert
+# if $( conda list -n python3  | grep -q papermill ); then
+# : # do nothing
+# else
+# conda install -y --name python3 -c conda-forge papermill nbconvert
+# fi
 
 bn=`basename $1`
 fname="${bn%.*}"
@@ -73,7 +80,7 @@ echo name is $fname
 eval "$(conda shell.bash hook)"
 conda activate python3
 
-cd /workspaces/_proj-dir/$fname
+cd $PROJDIR/$fname
 set -x
 kernelname="_kernel-tts-p1"
 kernelname="_kernel-llm"
@@ -83,10 +90,10 @@ papermill $kernelname.ipynb $kernelname.batchrun.ipynb --log-output -k python3
 # kernelname="_kernel-llm"
 jupyter nbconvert --to html $kernelname.batchrun.ipynb
 
-# kernelpath="/workspaces/_proj-dir/$fname/$kernelname.batchrun.ipynb"
-# echo "scp spot01:/workspaces/_proj-dir/$fname/$fname* $homedir/$symlnk/Downloads/;  explorer.exe c:/; " > /tmp/execstr_kag.sh
-# echo "scp spot01:/workspaces/_proj-dir/$fname/$fname*html $homedir/$symlnk/Downloads/;  explorer.exe c:/; " > /tmp/execstr_kag.sh
-echo "scp spot01:/workspaces/_proj-dir/$fname/$fname*html $homedir/$symlnk/Downloads/;  explorer.exe c:/; t 3 '{ctrl+w}{alt+tab}{ctrl+2}r'; " > /tmp/execstr_kag.sh
+# kernelpath="$PROJDIR/$fname/$kernelname.batchrun.ipynb"
+# echo "scp spot01:$PROJDIR/$fname/$fname* $homedir/$symlnk/Downloads/;  explorer.exe c:/; " > /tmp/execstr_kag.sh
+# echo "scp spot01:$PROJDIR/$fname/$fname*html $homedir/$symlnk/Downloads/;  explorer.exe c:/; " > /tmp/execstr_kag.sh
+echo "scp spot01:$PROJDIR/$fname/$fname*html $homedir/$symlnk/Downloads/;  explorer.exe c:/; t 3 '{ctrl+w}{alt+tab}{ctrl+2}r'; " > /tmp/execstr_kag.sh
 # sleep 3; ~/bin/t 0 '{ctrl+w}' 
 
 set +x
