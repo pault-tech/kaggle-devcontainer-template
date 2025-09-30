@@ -122,6 +122,12 @@ nbstripout --install
 
 pip install nbdime
 
+# To configure all diff/merge drivers and tools, simply call:
+
+# nbdime config-git (--enable | --disable) [--global | --system]
+# This command will register nbdime with git for the current project (repository), or on the global (user), or sytem level according to the --global or --system options.
+nbdime config-git  --enable
+
 }
 
 # echo optional dobatch arg $2
