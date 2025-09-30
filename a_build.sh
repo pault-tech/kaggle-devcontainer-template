@@ -105,6 +105,25 @@ date
 # local_jupyter_batch $1
 # date
 
+function _tmp_fix_ipynb_diff_cell_ids {
+
+_git diff cleanup notebook ipynb for magit, eg noisy changing cell-ids cellIds in diffs
+
+pip install nbstripout 
+
+# Using as a Git filter
+# Set up the git filter and attributes as described in the manual installation instructions below:
+
+nbstripout --install
+
+# NOTE after installing add --keep-output to commands in .git/config 
+
+# nbstripout --keep-output
+
+pip install nbdime
+
+}
+
 # echo optional dobatch arg $2
 if [ "$2" = "dobatch" ]; then
     local_jupyter_batch $1
