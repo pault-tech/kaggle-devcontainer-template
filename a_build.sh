@@ -1,4 +1,3 @@
-i
 # TODO: merge this with working project versions
 
 echo a_build.sh $0 $1 $2
@@ -7,7 +6,9 @@ echo optional dobatch arg $2
 
 # exit
 
-PROJDIR="/workspaces/_proj-dir/"
+# PROJDIR="/workspaces/_proj-dir/"
+curdir=`pwd`
+PROJDIR="$curdir"
 cd $PROJDIR
 homedir="/home/_todo_"
 symlnk="_todo_"

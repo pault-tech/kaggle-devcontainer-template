@@ -251,4 +251,6 @@ function _tmp {
 
 /workspaces/kaggle-devcontainer-template/kaggle.sh config_kaggle 
 
+kaggle competitions list
+
  }
